@@ -13,8 +13,12 @@ import java.util.Random;
 public class InsertionSort {
     public static void main(String[] args){
         int array[] = new int[10];
+        System.out.println("Insertion Sort:");
         array = creatingArray(array);
+        System.out.print("Before: ");
+        print(array);
         array = insertionSort(array);
+        System.out.print("After: ");
         print(array);    
     }
     
