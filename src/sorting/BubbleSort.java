@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author Octavio
+ * @author Octavio Massaro
  */
 public class BubbleSort {
 
