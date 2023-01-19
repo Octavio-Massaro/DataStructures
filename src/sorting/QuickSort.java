@@ -10,6 +10,16 @@ import java.util.Random;
  *
  * @author Octavio Massaro
  */
+
+/*          
+            QUICK SORT:
+
+    Complexity:
+        Best Case: O(n.lg n)
+        Average Case: O(n.lg n)
+        Worst Case: O(n^2)
+*/
+
 public class QuickSort {
     public static void main(String[] args) {
         int array[] = new int[10];

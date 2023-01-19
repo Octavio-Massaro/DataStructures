@@ -10,6 +10,15 @@ import java.util.Random;
  *
  * @author Octavio Massaro
  */
+
+/*
+            SELECTION SORT:
+
+    Complexity:
+        Best Case: O(n^2)
+        Average Case: O(n^2)
+        Worst Case: O(n^2)
+*/
 public class SelectionSort {
 
     public static void main(String[] args) {

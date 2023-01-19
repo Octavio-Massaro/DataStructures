@@ -10,6 +10,15 @@ import java.util.Random;
  *
  * @author Octavio Massaro
  */
+
+/*
+            MERGE SORT: 
+
+    Complexity:
+        Best Case: O(n.lg n)
+        Average Case: O(n.lg n)
+        Worst Case: O(n.lg n)
+*/
 public class MergeSort {
 
     public static void main(String[] args) {

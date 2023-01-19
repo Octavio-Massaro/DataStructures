@@ -10,6 +10,16 @@ import java.util.Random;
  *
  * @author Octavio Massaro
  */
+
+/*          
+            INSERTION SORT:
+
+    Complexity:
+        Best Case: O(n)
+        Average Case: O(n^2)
+        Worst Case: O(n^2)
+*/
+
 public class InsertionSort {
     public static void main(String[] args){
         int array[] = new int[10];

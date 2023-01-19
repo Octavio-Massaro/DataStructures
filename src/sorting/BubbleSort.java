@@ -10,6 +10,16 @@ import java.util.Random;
  *
  * @author Octavio Massaro
  */
+
+/*
+            BUBBLE SORT:
+
+    Complexity:
+        Best Case: O(n)
+        Average Case: O(n^2)
+        Worst Case: O(n^2)
+*/
+
 public class BubbleSort {
 
     public static void main(String[] args) {
