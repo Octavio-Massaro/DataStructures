@@ -15,8 +15,8 @@ import java.util.Random;
             QUICK SORT:
 
     Complexity:
-        Best Case: O(n.lg n)
-        Average Case: O(n.lg n)
+        Best Case: O(n.log n)
+        Average Case: O(n.log n)
         Worst Case: O(n^2)
 */
 

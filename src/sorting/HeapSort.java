@@ -11,23 +11,23 @@ import java.util.Random;
  * @author Octavio Massaro
  */
 
-/*
-            MERGE SORT: 
+/*          
+            HEAP SORT:
 
     Complexity:
         Best Case: O(n.log n)
         Average Case: O(n.log n)
         Worst Case: O(n.log n)
 */
-public class MergeSort {
+public class HeapSort {
 
     public static void main(String[] args) {
         int array[] = new int[10];
-        System.out.println("Merge Sort:");
+        System.out.println("Heap Sort:");
         array = creatingArray(array);
         System.out.print("Before: ");
         print(array);
-        array = mergeSort(array, 0, array.length-1);
+        array = heapSort(array);
         System.out.print("After: ");
         print(array);
     }
@@ -42,43 +42,44 @@ public class MergeSort {
         return array;
     }
 
-    public static int[] mergeSort(int array[], int begin, int end) {
+    public static int[] heapSort(int array[]) {
+        int n = array.length - 1;
+        int i;
+        int aux;
+        for (i = (n - 1) / 2; i >= 0; i--) {
+            sink(array, i, n);
+        }
 
-        if (end > begin) {
-            int middle = (begin + end) / 2;
-            mergeSort(array, begin, middle);
-            mergeSort(array, middle + 1, end);
-            merge(array, begin, middle, end);
+        while (n > 0) {
+            aux = array[0];
+            array[0] = array[n];
+            array[n] = aux;
+            n--;
+
+            sink(array, 0, n);
         }
 
         return array;
     }
 
-    public static void merge(int array[], int begin, int middle, int end) {
+    public static void sink(int array[], int i, int n) {
+        int j;
+        int aux;
 
-        int i = begin;
-        int j = middle + 1;
-        int temp[] = new int[10];
-        int k;
-
-        for (k = begin; k <= end; k++) {
-            temp[k] = array[k];
-        }
-
-        for (k = begin; k <= end; k++) {
-            if (i > middle) {
-                array[k] = temp[j];
-                j++;
-            } else if (j > end) {
-                array[k] = temp[i];
-                i++;
-            } else if (temp[i] < temp[j]) {
-                array[k] = temp[i];
-                i++;
-            } else {
-                array[k] = temp[j];
-                j++;
+        while (2 * i + 1 <= n) {
+            j = 2 * i + 1;
+            if (j < n && array[j] < array[j + 1]) {
+                j = j + 1;
             }
+
+            if (array[i] >= array[j]) {
+                break;
+
+            }
+            aux = array[i];
+            array[i] = array[j];
+            array[j] = aux;
+            i = j;
         }
     }
 
