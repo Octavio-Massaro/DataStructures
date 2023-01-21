@@ -4,8 +4,6 @@
  */
 package sorting;
 
-import java.util.Random;
-
 /**
  *
  * @author Octavio Massaro
@@ -18,30 +16,8 @@ import java.util.Random;
         Best Case: O(n)
         Average Case: O(n^2)
         Worst Case: O(n^2)
-*/
-
+ */
 public class BubbleSort {
-
-    public static void main(String[] args) {
-        int array[] = new int[10];
-        System.out.println("Bubble Sort:");
-        array = creatingArray(array);
-        System.out.print("Before: ");
-        print(array);
-        array = bubbleSort(array);
-        System.out.print("After: ");
-        print(array);
-    }
-
-    public static int[] creatingArray(int array[]) {
-        Random rand = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            array[i] = rand.nextInt(100);
-        }
-
-        return array;
-    }
 
     public static int[] bubbleSort(int array[]) {
         int n = array.length;
@@ -62,12 +38,5 @@ public class BubbleSort {
         }
 
         return array;
-    }
-
-    public static void print(int array[]) {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
     }
 }

@@ -4,8 +4,6 @@
  */
 package sorting;
 
-import java.util.Random;
-
 /**
  *
  * @author Octavio Massaro
@@ -18,29 +16,8 @@ import java.util.Random;
         Best Case: O(n^2)
         Average Case: O(n^2)
         Worst Case: O(n^2)
-*/
+ */
 public class SelectionSort {
-
-    public static void main(String[] args) {
-        int array[] = new int[10];
-        System.out.println("Selection Sort:");
-        array = creatingArray(array);
-        System.out.print("Before: ");
-        print(array);
-        array = selectionSort(array);
-        System.out.print("After: ");
-        print(array);
-    }
-
-    public static int[] creatingArray(int array[]) {
-        Random rand = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            array[i] = rand.nextInt(100);
-        }
-
-        return array;
-    }
 
     public static int[] selectionSort(int array[]) {
         int n = array.length;
@@ -62,12 +39,5 @@ public class SelectionSort {
         }
 
         return array;
-    }
-
-    public static void print(int array[]) {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
     }
 }

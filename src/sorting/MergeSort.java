@@ -4,8 +4,6 @@
  */
 package sorting;
 
-import java.util.Random;
-
 /**
  *
  * @author Octavio Massaro
@@ -18,29 +16,8 @@ import java.util.Random;
         Best Case: O(n.log n)
         Average Case: O(n.log n)
         Worst Case: O(n.log n)
-*/
+ */
 public class MergeSort {
-
-    public static void main(String[] args) {
-        int array[] = new int[10];
-        System.out.println("Merge Sort:");
-        array = creatingArray(array);
-        System.out.print("Before: ");
-        print(array);
-        array = mergeSort(array, 0, array.length-1);
-        System.out.print("After: ");
-        print(array);
-    }
-
-    public static int[] creatingArray(int array[]) {
-        Random rand = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            array[i] = rand.nextInt(100);
-        }
-
-        return array;
-    }
 
     public static int[] mergeSort(int array[], int begin, int end) {
 
@@ -80,12 +57,5 @@ public class MergeSort {
                 j++;
             }
         }
-    }
-
-    public static void print(int array[]) {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
     }
 }
