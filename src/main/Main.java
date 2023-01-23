@@ -5,7 +5,9 @@
 package main;
 
 import java.util.Random;
+import models.Books;
 import sorting.QuickSort;
+import stack.Stack;
 
 /**
  *
@@ -22,6 +24,21 @@ public class Main {
         array = QuickSort.quickSort(array, 0, array.length - 1);
         System.out.print("After: ");
         print(array);
+        Stack<Books> stack = new Stack<Books>();
+        System.out.println(stack.isEmpty());
+        stack.push(new Books(1,"The Hobbit", "fiction"));
+        stack.push(new Books(2,"A Game of thrones", "fiction"));
+        stack.push(new Books(3,"Lord of the Rings", "fiction"));
+        stack.push(new Books(4,"Java - How to program", "IT"));
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
+        
+        
+        
+        
+        
+        
     }
 
     public static int[] creatingArray(int array[]) {
