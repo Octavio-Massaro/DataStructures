@@ -7,7 +7,7 @@ package main;
 import java.util.Random;
 import models.Books;
 import sorting.QuickSort;
-import stack.Stack;
+import structures.Stack;
 
 /**
  *

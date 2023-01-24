@@ -4,7 +4,7 @@
  */
 package interfaces;
 
-import stack.Stack;
+import structures.Stack;
 
 /**
  *
