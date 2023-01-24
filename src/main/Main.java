@@ -32,7 +32,8 @@ public class Main {
         stack.push(new Books(4,"Java - How to program", "IT"));
         System.out.println(stack.isEmpty());
         System.out.println(stack.peek());
-        System.out.println(stack.pop());
+        System.out.println(stack.size());
+        stack.iterate(stack);
         
         
         
